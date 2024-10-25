@@ -1,16 +1,18 @@
-<!doctype HTML> 
-<html>
-
-<script src = " https://aframe.io/releases/0.9.2/aframe.min.js "> </script> 
-<script src = " https://raw.githack.com/jeromeetienne/AR.js /2.0.5/aframe/build/aframe-ar.js "> </script>
-
-<body style = 'margin: 0px; overflow: scroll;'> 
-  <a-scene embedded arjs =' patternRatio: 0.8 '>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Model in AR</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
     <a-marker type = 'pattern' url = 'qr / pattern-1.patt'>
-      <a-sphere position ="0 0,5 0" radius="1.25" color="#EF2D5E"> </a-sphere>
+      <a-entity gltf-model="url(https://yourlink/model.glb)" scale="1 1 1"></a-entity>
     </a-marker>
-    <a-entity camera> </a-entity>
-  </a-scene> 
-</body>    
-    
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
